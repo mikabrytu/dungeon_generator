@@ -21,11 +21,8 @@ func _recenter_map():
 	
 
 func _create_path():
-	for x in size.x:
-		for y in size.y:
-			var coord = Vector2i(x, y)
-			_fill(coord)
-			print(str(coord))
+	print("Calc new path to end level")
+	pass
 	
 
 func _fill(coord: Vector2i):
