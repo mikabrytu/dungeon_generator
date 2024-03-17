@@ -1,9 +1,11 @@
-[gd_scene format=3 uid="uid://b4ux6k01eab6r"]
+[gd_scene load_steps=2 format=3 uid="uid://b4ux6k01eab6r"]
+
+[ext_resource type="Script" path="res://scenes/player/player.gd" id="1_i2002"]
 
 [node name="Player" type="Node3D"]
+script = ExtResource("1_i2002")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(-1, 3.48787e-16, -8.74228e-08, 3.48787e-16, 1, -3.48787e-16, 8.74228e-08, -3.48787e-16, -1, 0, 0, 0)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-1, 3.48787e-16, -8.74228e-08, 3.48787e-16, 1, -3.48787e-16, 8.74228e-08, -3.48787e-16, -1, 0, 0, -1.47118)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 2.08165e-12, 2)
