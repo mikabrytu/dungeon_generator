@@ -4,6 +4,7 @@
 
 [node name="Player" type="Node3D"]
 script = ExtResource("1_i2002")
+tween_duration = 0.25
 
 [node name="Camera3D" type="Camera3D" parent="."]
 
