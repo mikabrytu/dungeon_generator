@@ -2,9 +2,10 @@
 
 [ext_resource type="Script" path="res://scenes/player/player.gd" id="1_i2002"]
 
-[node name="Player" type="Node3D"]
+[node name="Player" type="Node3D" groups=["actors"]]
 script = ExtResource("1_i2002")
 tween_duration = 0.25
+priority = 0
 
 [node name="Camera3D" type="Camera3D" parent="."]
 
