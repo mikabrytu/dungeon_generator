@@ -1,4 +1,4 @@
-extends Node3D
+class_name MapGenerator extends Node3D
 
 @export var size: Vector2i
 @export var tile_scene: PackedScene
@@ -18,10 +18,30 @@ func _ready():
 
 #endregion
 
+#region Publci API
+
+func get_random_empty_tile() -> Vector2i:
+	var coord = _get_random_coord()
+	while walls.find(coord) != -1:
+		coord = _get_random_coord()
+	
+	return coord
+	
+
+func get_map_size() -> Vector2i:
+	return size
+	
+
+func is_coord_wall(coord: Vector2i) -> bool:
+	return walls.find(coord) != -1
+	
+
+#endregion
+
 #region Implementation
 
 func _set_map():
-	_recenter_map()
+	#_recenter_map()
 	_set_wall_count()
 	_carv_dungeon()
 	_set_boundaries()
@@ -39,9 +59,7 @@ func _carv_dungeon():
 			stop = true
 			continue
 		
-		var x = randi_range(0, size.x - 1)
-		var y = randi_range(0, size.y - 1)
-		var coord = Vector2i(x, y)
+		var coord = _get_random_coord()
 		
 		if (!_try_to_add(coord)):
 			if (carv_attempts == max_carv_attempts):
@@ -65,6 +83,11 @@ func _set_boundaries():
 		_fill(Vector2i(-1, y))
 		_fill(Vector2i(size.x, y))
 	
+
+func _get_random_coord() -> Vector2i:
+	var x = randi_range(0, size.x - 1)
+	var y = randi_range(0, size.y - 1)
+	return Vector2i(x, y)
 
 func _try_to_add(coord: Vector2i) -> bool:
 	if (walls.find(coord) == -1):
