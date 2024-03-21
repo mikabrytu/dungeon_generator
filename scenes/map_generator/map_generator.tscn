@@ -5,7 +5,7 @@
 
 [node name="MapGenerator" type="Node3D"]
 script = ExtResource("1_fo3oj")
-size = Vector2i(30, 20)
+size = Vector2i(60, 40)
 tile_scene = ExtResource("2_46jwq")
-max_carv_attempts = 3
-wall_count_divider = 2.5
+max_carv_attempts = 10
+wall_count_divider = 2.0

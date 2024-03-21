@@ -10,21 +10,28 @@ var walls: Array[Vector2i] = []
 var wall_count: int
 var carv_attempts: int = 0
 
+#region Godot Lifecycle
+
 func _ready():
 	_set_map()
 	
 
+#endregion
+
+#region Implementation
+
 func _set_map():
 	_recenter_map()
 	_set_wall_count()
-	_create_path()
+	_carv_dungeon()
+	_set_boundaries()
 	
 
 func _set_wall_count():
 	wall_count = (size.x * size.y) / wall_count_divider
 	
 
-func _create_path():
+func _carv_dungeon():
 	var stop: bool = false
 	
 	while (!stop):
@@ -47,6 +54,16 @@ func _create_path():
 					_try_to_add(coord)
 	
 	print("Map is generated with " + str(walls.size()) + " walls")
+	
+
+func _set_boundaries():
+	for x in size.x:
+		_fill(Vector2i(x, -1))
+		_fill(Vector2i(x, size.y))
+	
+	for y in size.y:
+		_fill(Vector2i(-1, y))
+		_fill(Vector2i(size.x, y))
 	
 
 func _try_to_add(coord: Vector2i) -> bool:
@@ -76,6 +93,7 @@ func _get_empty_neighbor(coord: Vector2i) -> Vector2i:
 
 func _is_coord_valid(coord: Vector2i) -> bool:
 	return coord.x > 0 && coord.x < size.x - 1 && coord.y > 0 && coord.y < size.y - 1
+	
 
 func _recenter_map():
 	var map_x = (size.x / 2) * -1
@@ -92,3 +110,5 @@ func _fill(coord: Vector2i):
 	add_child(tile)
 	tile.position = position
 	
+
+#endregion
