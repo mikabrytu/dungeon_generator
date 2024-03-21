@@ -5,6 +5,8 @@ extends Actor
 var can_move: bool = false
 var is_moving: bool = false
 
+#region Godot Lifecycle
+
 func _process(delta):
 	if (!can_move):
 		return
@@ -15,6 +17,10 @@ func _process(delta):
 	_check_move()
 	_check_rotate()
 	
+
+#endregion
+
+#region Implementation
 
 func _check_move():
 	var direction = Vector3.ZERO
@@ -58,9 +64,22 @@ func _check_rotate():
 	.connect(_on_tween_finished)
 	
 
+#endregion
+
+#region Actor Override
+
 func can_act():
 	can_move = true
 	
 
+#endregion
+
+#region Listeners
+
 func _on_tween_finished():
 	is_moving = false
+	can_move = false
+	
+	actor_finished.emit()
+
+#endregion
