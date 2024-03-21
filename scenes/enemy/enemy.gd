@@ -1,9 +1,8 @@
-extends CSGSphere3D
-
+extends Actor
 
 func _move():
 	position = position + Vector3.BACK
+	
 
-
-func _on_timer_timeout():
+func can_act():
 	_move()

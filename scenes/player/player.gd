@@ -1,10 +1,14 @@
-extends Node3D
+extends Actor
 
 @export var tween_duration: float
 
+var can_move: bool = false
 var is_moving: bool = false
 
 func _process(delta):
+	if (!can_move):
+		return
+	
 	if (is_moving):
 		return
 	
@@ -52,6 +56,10 @@ func _check_rotate():
 	.tween_property(self, "rotation_degrees", angle, tween_duration) \
 	.finished \
 	.connect(_on_tween_finished)
+	
+
+func can_act():
+	can_move = true
 	
 
 func _on_tween_finished():
