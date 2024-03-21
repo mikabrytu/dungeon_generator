@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://dwmmwucvb0jq2"]
+[gd_scene load_steps=4 format=3 uid="uid://dwmmwucvb0jq2"]
 
 [ext_resource type="PackedScene" uid="uid://bmu30idxfdbu5" path="res://scenes/map_generator/map_generator.tscn" id="1_mpmro"]
 [ext_resource type="PackedScene" uid="uid://b4ux6k01eab6r" path="res://scenes/player/player.tscn" id="2_at618"]
+[ext_resource type="PackedScene" uid="uid://b2igpnmoc7kp5" path="res://scenes/enemy/enemy.tscn" id="3_r2s0o"]
 
 [node name="Main" type="Node3D"]
 
@@ -9,5 +10,9 @@
 transform = Transform3D(1, -6.97574e-16, -1.5246e-23, -1.5246e-23, -4.37114e-08, 1, -6.97574e-16, -1, -4.37114e-08, 2.08165e-12, 10, 2.08165e-12)
 
 [node name="MapGenerator" parent="." instance=ExtResource("1_mpmro")]
+wall_count_divider = 10.0
 
 [node name="Player" parent="." instance=ExtResource("2_at618")]
+
+[node name="Enemy" parent="." instance=ExtResource("3_r2s0o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 2.08165e-12, -10)
