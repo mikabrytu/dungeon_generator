@@ -18,4 +18,4 @@ wall_count_divider = 10.0
 [node name="Player" parent="." instance=ExtResource("2_at618")]
 
 [node name="Enemy" parent="." instance=ExtResource("3_r2s0o")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 2.08165e-12, -10)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 2.08165e-12, -5)
