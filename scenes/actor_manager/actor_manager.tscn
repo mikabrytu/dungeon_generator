@@ -4,3 +4,7 @@
 
 [node name="ActorManager" type="Node3D"]
 script = ExtResource("1_88yq1")
+
+[node name="Next Turn Delay" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
