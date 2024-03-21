@@ -1,6 +1,4 @@
-extends Node3D
-
-class_name Actor
+class_name Actor extends Node3D
 
 @export var priority: int = 1
 
