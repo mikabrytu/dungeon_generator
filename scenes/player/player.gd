@@ -7,6 +7,11 @@ var is_moving: bool = false
 
 #region Godot Lifecycle
 
+func _ready():
+	var coord = Provider.get_random_empty_tile()
+	self.position = Vector3(coord.x, 0, coord.y)
+	
+
 func _process(delta):
 	if (!can_move):
 		return
@@ -33,12 +38,16 @@ func _check_move():
 	if (Input.is_action_just_pressed("right")):
 		direction = self.transform.basis.x.normalized()
 	
+	var position = self.position + direction
+	
 	if (direction == Vector3.ZERO):
 		return
 	
-	is_moving = true
+	if (Provider.is_coord_wall(Vector2i(position.x, position.z))):
+		print("Player is trying to move into a wall")
+		return
 	
-	var position = self.position + direction
+	is_moving = true
 	create_tween() \
 	.tween_property(self, "position", position, tween_duration) \
 	.finished \

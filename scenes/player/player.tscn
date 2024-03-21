@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://b4ux6k01eab6r"]
+[gd_scene load_steps=3 format=3 uid="uid://b4ux6k01eab6r"]
 
 [ext_resource type="Script" path="res://scenes/player/player.gd" id="1_i2002"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4nqkj"]
+albedo_color = Color(0, 0.513726, 0.282353, 1)
 
 [node name="Player" type="Node3D" groups=["actors"]]
 script = ExtResource("1_i2002")
@@ -11,3 +14,7 @@ priority = 0
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 2.08165e-12, 2)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+material_override = SubResource("StandardMaterial3D_4nqkj")
+size = Vector3(0.8, 0.8, 0.8)
