@@ -8,8 +8,8 @@ var is_moving: bool = false
 #region Godot Lifecycle
 
 func _ready():
-	var coord = Provider.get_random_empty_tile()
-	self.position = Vector3(coord.x, 0, coord.y)
+	super._ready()
+	_spawn_player()
 	
 
 func _process(delta):
@@ -26,6 +26,11 @@ func _process(delta):
 #endregion
 
 #region Implementation
+
+func _spawn_player():
+	var coord = Provider.get_random_empty_tile()
+	self.position = Vector3(coord.x, 0, coord.y)
+	
 
 func _check_move():
 	var direction = Vector3.ZERO
