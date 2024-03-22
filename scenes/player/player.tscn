@@ -5,17 +5,18 @@
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4nqkj"]
 albedo_color = Color(0, 0.513726, 0.282353, 1)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_vgx4v"]
+[sub_resource type="SphereShape3D" id="SphereShape3D_d1wa2"]
 
 [node name="Player" type="Node3D" groups=["actors"]]
 script = ExtResource("1_i2002")
 tween_duration = 0.25
 priority = 0
+weakness = 3
 
 [node name="Camera3D" type="Camera3D" parent="."]
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 2.08165e-12, 2)
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+omni_range = 3.10773
 
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
 material_override = SubResource("StandardMaterial3D_4nqkj")
@@ -25,4 +26,5 @@ size = Vector3(0.8, 0.8, 0.8)
 [node name="Area3D" type="Area3D" parent="."]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
-shape = SubResource("BoxShape3D_vgx4v")
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)
+shape = SubResource("SphereShape3D_d1wa2")
