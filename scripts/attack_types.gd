@@ -1,1 +1,1 @@
-enum TYPES { RED, GREEN, BLUE }
+enum TYPES { RED, GREEN, BLUE, ALL, NONE }
