@@ -8,12 +8,13 @@ extends Node3D
 
 func _process(_delta):
 	if (Input.is_action_just_pressed("fire_gun")):
-		var bullet = bullet_scene.instantiate() as Bullet
-		bullet.setup(Color.RED, Vector3i.FORWARD)
-		bullet.position = spawn_marker.position
+		var diretion = -get_parent().global_transform.basis.z.normalized()
 		
-		add_child(bullet)
-		bullet.reparent(get_tree().root)
+		var bullet = bullet_scene.instantiate() as Bullet
+		bullet.setup(Color.RED, diretion)
+		bullet.position = spawn_marker.global_position
+		
+		get_tree().root.add_child(bullet)
 	
 
 #endregion
