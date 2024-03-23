@@ -36,7 +36,7 @@ func _validate_hit(damage: int, type: AttackTypes.TYPES):
 	if (weakness == AttackTypes.TYPES.NONE):
 		return
 	
-	if (weakness == AttackTypes.TYPES.ALL || type == type):
+	if (weakness == AttackTypes.TYPES.ALL || weakness == type):
 		health.damage(damage)
 	
 
