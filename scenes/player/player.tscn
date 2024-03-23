@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://b4ux6k01eab6r"]
+[gd_scene load_steps=5 format=3 uid="uid://b4ux6k01eab6r"]
 
 [ext_resource type="Script" path="res://scenes/player/player.gd" id="1_i2002"]
+[ext_resource type="PackedScene" uid="uid://17sxhdwjq2qr" path="res://scenes/health/health.tscn" id="2_177ib"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4nqkj"]
 albedo_color = Color(0, 0.513726, 0.282353, 1)
@@ -23,8 +24,10 @@ material_override = SubResource("StandardMaterial3D_4nqkj")
 use_collision = true
 size = Vector3(0.8, 0.8, 0.8)
 
-[node name="Area3D" type="Area3D" parent="."]
+[node name="CollisionArea" type="Area3D" parent="."]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CollisionArea"]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)
 shape = SubResource("SphereShape3D_d1wa2")
+
+[node name="Health" parent="." instance=ExtResource("2_177ib")]
