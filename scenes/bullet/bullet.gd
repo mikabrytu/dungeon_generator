@@ -4,16 +4,37 @@ const AttackTypes = preload("res://scripts/attack_types.gd")
 
 @export var damage: int = 1
 @export var bullet_type: AttackTypes.TYPES
+@export var speed: float
 
 @onready var model: MeshInstance3D = $Model
 
+var shot_direction: Vector3i
+
+#region Godot Lifecycle
+
+func _process(delta):
+	position = position + (shot_direction * speed * delta)
+	
+
+#endregion
+
 #region Public API
 
-func setup(color: Color):
-	var material = StandardMaterial3D.new()
-	material.albedo_color = color
+func setup(color: Color, direction: Vector3i):
+	if (model == null):
+		model = $Model
 	
-	model.material_override = material
+	_change_bullet_color(color)
+	_set_direction(direction)
+	
+
+func set_type(type: AttackTypes.TYPES):
+	bullet_type = type
+	
+ 
+func set_damage(damage: int):
+	self.damage = damage
+	
 
 func get_damage() -> int:
 	return damage
@@ -21,5 +42,20 @@ func get_damage() -> int:
 
 func get_attack_type() -> AttackTypes.TYPES:
 	return bullet_type
+
+#endregion
+
+#region Implementation
+
+func _change_bullet_color(color: Color):
+	var material = StandardMaterial3D.new()
+	material.albedo_color = color
+	
+	model.material_override = material
+	
+
+func _set_direction(direction: Vector3i):
+	shot_direction = direction
+	
 
 #endregion
