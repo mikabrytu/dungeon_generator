@@ -32,12 +32,12 @@ func can_act():
 
 #region Implementaion
 
-func _validate_hit():
-	# Cast hit to proper class
-	# Check for attack type and weakness
-	# Damage by amount
+func _validate_hit(damage: int, type: AttackTypes.TYPES):
+	if (weakness == AttackTypes.TYPES.NONE):
+		return
 	
-	health.damage(1)
+	if (weakness == AttackTypes.TYPES.ALL || type == type):
+		health.damage(damage)
 	
 
 #endregion
@@ -45,7 +45,9 @@ func _validate_hit():
 #region Listeners
 
 func _on_area_entered(area: Area3D):
-	_validate_hit()
+	if (area.get_parent().is_in_group("bullets")):
+		var bullet = area.get_parent() as Bullet
+		_validate_hit(bullet.get_damage(), bullet.get_attack_type())
 	
 
 func _on_actor_dead():
