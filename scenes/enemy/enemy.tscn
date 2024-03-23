@@ -1,8 +1,20 @@
-[gd_scene load_steps=2 format=3 uid="uid://b2igpnmoc7kp5"]
+[gd_scene load_steps=4 format=3 uid="uid://b2igpnmoc7kp5"]
 
 [ext_resource type="Script" path="res://scenes/enemy/enemy.gd" id="1_8uuuy"]
+[ext_resource type="PackedScene" uid="uid://17sxhdwjq2qr" path="res://scenes/health/health.tscn" id="2_64maj"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_ta2y5"]
 
 [node name="Enemy" type="Node3D" groups=["actors"]]
 script = ExtResource("1_8uuuy")
 
 [node name="CSGSphere3D" type="CSGSphere3D" parent="."]
+use_collision = true
+
+[node name="CollisionArea" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CollisionArea"]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)
+shape = SubResource("SphereShape3D_ta2y5")
+
+[node name="Health" parent="." instance=ExtResource("2_64maj")]
