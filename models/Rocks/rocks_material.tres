@@ -21,7 +21,7 @@ width = 1
 [resource]
 render_priority = 0
 shader = ExtResource("1_fuyvp")
-shader_parameter/albedo = Color(0.341176, 0.231373, 0.211765, 1)
+shader_parameter/albedo = Color(0.407843, 0.172549, 0.156863, 1)
 shader_parameter/point_size = null
 shader_parameter/roughness = null
 shader_parameter/metallic_texture_channel = null
