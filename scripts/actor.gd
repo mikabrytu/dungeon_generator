@@ -13,7 +13,7 @@ signal actor_finished
 #region Godot Lifecycle
 
 func _ready():
-	collision_area.body_entered.connect(_on_body_entered)
+	collision_area.area_entered.connect(_on_area_entered)
 	health.dead.connect(_on_actor_dead)
 	
 
@@ -32,7 +32,7 @@ func can_act():
 
 #region Implementaion
 
-func _validate_hit(hit: Node3D):
+func _validate_hit():
 	# Cast hit to proper class
 	# Check for attack type and weakness
 	# Damage by amount
@@ -44,8 +44,8 @@ func _validate_hit(hit: Node3D):
 
 #region Listeners
 
-func _on_body_entered(body: Node3D):
-	_validate_hit(body)
+func _on_area_entered(area: Area3D):
+	_validate_hit()
 	
 
 func _on_actor_dead():
