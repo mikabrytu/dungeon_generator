@@ -1,6 +1,22 @@
-[gd_scene load_steps=4 format=3 uid="uid://cp1ha4v358x5i"]
+[gd_scene load_steps=6 format=3 uid="uid://cp1ha4v358x5i"]
 
 [ext_resource type="Script" path="res://scenes/bullet/bullet.gd" id="1_gd5o3"]
+[ext_resource type="Shader" path="res://shaders/gobot_shader.tres" id="2_bn17w"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xx4tv"]
+render_priority = 1
+shader = ExtResource("2_bn17w")
+shader_parameter/albedo = Color(1, 0, 0, 1)
+shader_parameter/point_size = null
+shader_parameter/roughness = null
+shader_parameter/metallic_texture_channel = null
+shader_parameter/specular = null
+shader_parameter/metallic = null
+shader_parameter/normal_scale = null
+shader_parameter/uv1_scale = null
+shader_parameter/uv1_offset = null
+shader_parameter/uv2_scale = null
+shader_parameter/uv2_offset = null
 
 [sub_resource type="SphereMesh" id="SphereMesh_821hp"]
 
@@ -12,6 +28,7 @@ speed = 5.0
 
 [node name="Model" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
+material_override = SubResource("ShaderMaterial_xx4tv")
 mesh = SubResource("SphereMesh_821hp")
 
 [node name="Area3D" type="Area3D" parent="."]
