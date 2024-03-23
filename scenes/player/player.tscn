@@ -34,4 +34,4 @@ shape = SubResource("SphereShape3D_d1wa2")
 [node name="Health" parent="." instance=ExtResource("2_177ib")]
 
 [node name="Gun" parent="." instance=ExtResource("3_7fnoa")]
-transform = Transform3D(-1, 3.48787e-16, -8.74228e-08, 3.48787e-16, 1, -3.48787e-16, 8.74228e-08, -3.48787e-16, -1, 0.124711, -0.277024, -0.32333)
+transform = Transform3D(-1, 3.48787e-16, -8.74228e-08, 3.48787e-16, 1, -3.48787e-16, 8.74228e-08, -3.48787e-16, -1, 0.24278, -0.277024, -0.444612)

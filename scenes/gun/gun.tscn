@@ -1,14 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://b06gfqr7ko2am"]
+[gd_scene load_steps=4 format=3 uid="uid://b06gfqr7ko2am"]
 
 [ext_resource type="Script" path="res://scenes/gun/gun.gd" id="1_eu12u"]
 [ext_resource type="PackedScene" uid="uid://cp1ha4v358x5i" path="res://scenes/bullet/bullet.tscn" id="2_psfgq"]
+[ext_resource type="PackedScene" uid="uid://c3u5012tyejav" path="res://models/Blaster.glb" id="3_pnhnw"]
 
 [node name="Gun" type="Node3D"]
 script = ExtResource("1_eu12u")
 bullet_scene = ExtResource("2_psfgq")
 
-[node name="CSGBox3D" type="CSGBox3D" parent="."]
-size = Vector3(0.195068, 0.165771, 0.449707)
+[node name="Blaster" parent="." instance=ExtResource("3_pnhnw")]
+transform = Transform3D(-0.981514, 0.0651458, -0.179963, 4.3928e-09, 0.940288, 0.34038, 0.191392, 0.334087, -0.922906, -0.0931241, -0.197583, -0.0807585)
 
 [node name="Marker3D" type="Marker3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.240697)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.111296, 0.235263)
