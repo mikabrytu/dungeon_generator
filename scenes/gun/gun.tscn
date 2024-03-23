@@ -2,13 +2,13 @@
 
 [ext_resource type="Script" path="res://scenes/gun/gun.gd" id="1_eu12u"]
 [ext_resource type="PackedScene" uid="uid://cp1ha4v358x5i" path="res://scenes/bullet/bullet.tscn" id="2_psfgq"]
-[ext_resource type="PackedScene" uid="uid://c3u5012tyejav" path="res://models/Blaster.glb" id="3_pnhnw"]
+[ext_resource type="PackedScene" uid="uid://b251om0ceebf4" path="res://models/Blaster/blaster.tscn" id="3_x2h23"]
 
 [node name="Gun" type="Node3D"]
 script = ExtResource("1_eu12u")
 bullet_scene = ExtResource("2_psfgq")
 
-[node name="Blaster" parent="." instance=ExtResource("3_pnhnw")]
+[node name="Blaster2" parent="." instance=ExtResource("3_x2h23")]
 transform = Transform3D(-0.981514, 0.0651458, -0.179963, 4.3928e-09, 0.940288, 0.34038, 0.191392, 0.334087, -0.922906, -0.0931241, -0.197583, -0.0807585)
 
 [node name="Marker3D" type="Marker3D" parent="."]
