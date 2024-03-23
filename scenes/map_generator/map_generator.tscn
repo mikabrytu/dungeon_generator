@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bmu30idxfdbu5"]
 
 [ext_resource type="Script" path="res://scenes/map_generator/map_generator.gd" id="1_fo3oj"]
-[ext_resource type="PackedScene" uid="uid://67f5u4piagow" path="res://scenes/tile.tscn" id="2_46jwq"]
+[ext_resource type="PackedScene" uid="uid://67f5u4piagow" path="res://scenes/tile/tile.tscn" id="2_46jwq"]
 
 [node name="MapGenerator" type="Node3D"]
 script = ExtResource("1_fo3oj")
