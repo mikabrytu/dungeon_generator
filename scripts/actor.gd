@@ -13,6 +13,7 @@ signal actor_finished
 
 func _ready():
 	collision_area.body_entered.connect(_on_body_entered)
+	
 
 #endregion
 
@@ -30,6 +31,6 @@ func can_act():
 #region Listeners
 
 func _on_body_entered(body: Node3D):
-	print(body.name + " is hitting " + self.name)
+	print(body.get_parent().name + " is hitting " + self.name)
 
 #endregion
