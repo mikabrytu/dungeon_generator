@@ -1,0 +1,36 @@
+[gd_resource type="ShaderMaterial" load_steps=6 format=3 uid="uid://derwsxtuni44j"]
+
+[ext_resource type="Shader" path="res://shaders/gobot_shader.tres" id="1_fuyvp"]
+
+[sub_resource type="Gradient" id="Gradient_cnxu2"]
+interpolation_mode = 1
+offsets = PackedFloat32Array(0, 0.642633, 0.76489)
+colors = PackedColorArray(0.129558, 0.129558, 0.129558, 1, 0.20871, 0.20871, 0.20871, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_i8td3"]
+gradient = SubResource("Gradient_cnxu2")
+
+[sub_resource type="Gradient" id="Gradient_j5bsu"]
+offsets = PackedFloat32Array(0.267559, 0.963211)
+colors = PackedColorArray(0, 0, 0, 1, 0.151276, 0.151276, 0.151276, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_56dxj"]
+gradient = SubResource("Gradient_j5bsu")
+width = 1
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_fuyvp")
+shader_parameter/albedo = Color(0.341176, 0.231373, 0.211765, 1)
+shader_parameter/point_size = null
+shader_parameter/roughness = null
+shader_parameter/metallic_texture_channel = null
+shader_parameter/specular = null
+shader_parameter/metallic = null
+shader_parameter/normal_scale = null
+shader_parameter/uv1_scale = null
+shader_parameter/uv1_offset = null
+shader_parameter/uv2_scale = null
+shader_parameter/uv2_offset = null
+shader_parameter/color_gradient = SubResource("GradientTexture1D_i8td3")
+shader_parameter/fresnel_gradient = SubResource("GradientTexture1D_56dxj")
