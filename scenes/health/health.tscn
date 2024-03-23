@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://17sxhdwjq2qr"]
+
+[ext_resource type="Script" path="res://scenes/health/health.gd" id="1_twix8"]
+
+[node name="Health" type="Node3D"]
+script = ExtResource("1_twix8")
+max_health = 1
