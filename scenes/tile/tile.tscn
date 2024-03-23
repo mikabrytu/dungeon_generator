@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://67f5u4piagow"]
+
+[ext_resource type="Script" path="res://scenes/tile/tile.gd" id="1_a2bgj"]
+[ext_resource type="PackedScene" uid="uid://dlxgi3ib2el27" path="res://models/Rocks.glb" id="2_n2ho2"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lf22c"]
+
+[node name="Tile" type="Node3D"]
+script = ExtResource("1_a2bgj")
+
+[node name="Rocks" parent="." instance=ExtResource("2_n2ho2")]
+transform = Transform3D(0.49, 0, 0, 0, 0.49, 0, 0, 0, 0.49, 0, 0, 0)
+
+[node name="Area3D" type="Area3D" parent="."]
+monitoring = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("BoxShape3D_lf22c")
