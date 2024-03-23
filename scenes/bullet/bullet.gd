@@ -5,6 +5,7 @@ const AttackTypes = preload("res://scripts/attack_types.gd")
 @export var damage: int = 1
 @export var bullet_type: AttackTypes.TYPES
 @export var speed: float
+@export var shader: Shader
 
 @onready var model: MeshInstance3D = $Model
 
@@ -48,7 +49,8 @@ func get_attack_type() -> AttackTypes.TYPES:
 #region Implementation
 
 func _change_bullet_color(color: Color):
-	var material = model.get_active_material(0)
+	var material = ShaderMaterial.new()
+	material.shader = shader
 	material.set_shader_parameter("albedo", color)
 	
 	model.material_override = material
