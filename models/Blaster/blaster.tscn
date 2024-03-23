@@ -1,0 +1,51 @@
+[gd_scene load_steps=6 format=3 uid="uid://b251om0ceebf4"]
+
+[ext_resource type="PackedScene" uid="uid://c3u5012tyejav" path="res://models/Blaster/Blaster.glb" id="1_f63dm"]
+[ext_resource type="Material" uid="uid://bwqqk6v4o8fyp" path="res://models/Blaster/base_metal_material.tres" id="2_tc7k2"]
+[ext_resource type="Material" uid="uid://d1s3o36ds7mfm" path="res://models/Blaster/base_plastic_material.tres" id="3_v12to"]
+[ext_resource type="Material" uid="uid://bpgcdvgyixr5r" path="res://models/Blaster/trigger_material.tres" id="3_x2pb3"]
+[ext_resource type="Material" uid="uid://canhbw7tehvaw" path="res://models/Blaster/blaster_emission.tres" id="4_aa4lg"]
+
+[node name="Blaster" instance=ExtResource("1_f63dm")]
+
+[node name="pCube1_low" parent="LowPoly/For_Bake" index="1"]
+material_override = ExtResource("2_tc7k2")
+
+[node name="pCube2_low1" parent="LowPoly/For_Bake" index="4"]
+material_override = ExtResource("3_x2pb3")
+
+[node name="pCylinder11_low1" parent="LowPoly/For_Bake" index="12"]
+material_override = ExtResource("4_aa4lg")
+
+[node name="pCylinder19_low" parent="LowPoly/For_Bake" index="17"]
+material_override = ExtResource("4_aa4lg")
+
+[node name="pCylinder1_low" parent="LowPoly/For_Bake" index="19"]
+material_override = ExtResource("2_tc7k2")
+
+[node name="pCylinder2_low" parent="LowPoly/For_Bake" index="21"]
+material_override = ExtResource("2_tc7k2")
+
+[node name="pCylinder36_low1" parent="LowPoly/For_Bake" index="24"]
+material_override = ExtResource("3_v12to")
+
+[node name="pCylinder3_low" parent="LowPoly/For_Bake" index="27"]
+material_override = ExtResource("2_tc7k2")
+
+[node name="pCylinder4_low" parent="LowPoly/For_Bake" index="29"]
+material_override = ExtResource("4_aa4lg")
+
+[node name="pSphere2_low" parent="LowPoly/For_Bake" index="34"]
+material_override = ExtResource("3_v12to")
+
+[node name="pCylinder17_low" parent="LowPoly" index="3"]
+material_override = ExtResource("4_aa4lg")
+
+[node name="pCylinder18_low" parent="LowPoly" index="5"]
+material_override = ExtResource("4_aa4lg")
+
+[node name="pCylinder20_low" parent="LowPoly" index="7"]
+material_override = ExtResource("4_aa4lg")
+
+[node name="pCylinder21_low" parent="LowPoly" index="9"]
+material_override = ExtResource("4_aa4lg")

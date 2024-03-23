@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://c3u5012tyejav"
-path="res://.godot/imported/Blaster.glb-9f460d93c5e1c3cdda0c8beffdfaf069.scn"
+path="res://.godot/imported/Blaster.glb-fccdca609e9e9808ff5fa8c58b809cdd.scn"
 
 [deps]
 
-source_file="res://models/Blaster.glb"
-dest_files=["res://.godot/imported/Blaster.glb-9f460d93c5e1c3cdda0c8beffdfaf069.scn"]
+source_file="res://models/Blaster/Blaster.glb"
+dest_files=["res://.godot/imported/Blaster.glb-fccdca609e9e9808ff5fa8c58b809cdd.scn"]
 
 [params]
 
