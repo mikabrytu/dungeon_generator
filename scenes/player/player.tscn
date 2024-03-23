@@ -15,11 +15,12 @@ tween_duration = 0.25
 priority = 0
 weakness = 3
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(1, -6.32031e-16, 2.03531e-16, 2.03532e-16, 0.583541, 0.812084, -6.32031e-16, -0.812084, 0.583541, 2.08165e-12, 10, 2.08165e-12)
-
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.182991)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, -6.50845e-16, 1.74393e-16, 1.74393e-16, 0.5, 0.866025, -6.50845e-16, -0.866025, 0.5, 2.08165e-12, 10, 2.08165e-12)
+light_energy = 0.5
 
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
 visible = false

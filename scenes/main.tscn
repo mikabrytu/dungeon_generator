@@ -1,13 +1,54 @@
-[gd_scene load_steps=4 format=3 uid="uid://dwmmwucvb0jq2"]
+[gd_scene load_steps=9 format=3 uid="uid://dwmmwucvb0jq2"]
 
 [ext_resource type="PackedScene" uid="uid://bmu30idxfdbu5" path="res://scenes/map_generator/map_generator.tscn" id="1_mpmro"]
 [ext_resource type="PackedScene" uid="uid://ctqmyb8atdxvc" path="res://scenes/actor_manager/actor_manager.tscn" id="2_kkhci"]
 [ext_resource type="PackedScene" uid="uid://b4ux6k01eab6r" path="res://scenes/player/player.tscn" id="5_0pib6"]
 
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_6m82p"]
+sky_top_color = Color(0, 0.933333, 0.533333, 1)
+sky_horizon_color = Color(0, 0.490196, 0.270588, 1)
+sky_curve = 0.409812
+sky_energy_multiplier = 0.01
+
+[sub_resource type="Sky" id="Sky_4r4m8"]
+sky_material = SubResource("ProceduralSkyMaterial_6m82p")
+
+[sub_resource type="Environment" id="Environment_1ycw3"]
+background_mode = 1
+background_color = Color(0, 0.356863, 0.2, 1)
+background_energy_multiplier = 1.5
+sky = SubResource("Sky_4r4m8")
+sky_rotation = Vector3(-0.111701, 3.48787e-16, -0.109956)
+ambient_light_source = 3
+ambient_light_color = Color(0, 0.490196, 0.270588, 1)
+reflected_light_source = 2
+tonemap_mode = 1
+tonemap_exposure = 1.35
+sdfgi_bounce_feedback = 0.08
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.075
+volumetric_fog_albedo = Color(0, 0.490196, 0.270588, 1)
+volumetric_fog_emission = Color(0.239216, 0.478431, 0.32549, 1)
+volumetric_fog_length = 100.0
+volumetric_fog_sky_affect = 0.728
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y3bjt"]
+albedo_color = Color(0.341176, 0.231373, 0.211765, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_rmgmt"]
+
 [node name="Main" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_1ycw3")
 
 [node name="MapGenerator" parent="." instance=ExtResource("1_mpmro")]
 
 [node name="ActorManager" parent="." instance=ExtResource("2_kkhci")]
 
 [node name="Player" parent="." instance=ExtResource("5_0pib6")]
+
+[node name="Ground" type="MeshInstance3D" parent="."]
+transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 2.08165e-12, -0.5, 2.08165e-12)
+material_override = SubResource("StandardMaterial3D_y3bjt")
+mesh = SubResource("PlaneMesh_rmgmt")
