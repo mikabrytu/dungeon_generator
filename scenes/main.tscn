@@ -1,21 +1,17 @@
-[gd_scene load_steps=6 format=3 uid="uid://dwmmwucvb0jq2"]
+[gd_scene load_steps=5 format=3 uid="uid://dwmmwucvb0jq2"]
 
 [ext_resource type="PackedScene" uid="uid://bmu30idxfdbu5" path="res://scenes/map_generator/map_generator.tscn" id="1_mpmro"]
 [ext_resource type="PackedScene" uid="uid://cjie3qnxs3gcj" path="res://scenes/debug_camera/debug_camera.tscn" id="1_vybdd"]
 [ext_resource type="PackedScene" uid="uid://ctqmyb8atdxvc" path="res://scenes/actor_manager/actor_manager.tscn" id="2_kkhci"]
-[ext_resource type="PackedScene" uid="uid://b2igpnmoc7kp5" path="res://scenes/enemy/enemy.tscn" id="4_vh8pv"]
 [ext_resource type="PackedScene" uid="uid://b4ux6k01eab6r" path="res://scenes/player/player.tscn" id="5_0pib6"]
 
 [node name="Main" type="Node3D"]
-
-[node name="DebugCamera" parent="." instance=ExtResource("1_vybdd")]
-transform = Transform3D(1, -6.97574e-16, -1.52459e-23, -1.5246e-23, -4.37114e-08, 1, -6.97574e-16, -1, -4.37114e-08, 2.08165e-12, 30, 2.08165e-12)
 
 [node name="MapGenerator" parent="." instance=ExtResource("1_mpmro")]
 
 [node name="ActorManager" parent="." instance=ExtResource("2_kkhci")]
 
-[node name="Enemy" parent="." instance=ExtResource("4_vh8pv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 2.08165e-12, -5)
-
 [node name="Player" parent="." instance=ExtResource("5_0pib6")]
+
+[node name="DebugCamera" parent="." instance=ExtResource("1_vybdd")]
+transform = Transform3D(1, -6.97574e-16, -1.52459e-23, -1.5246e-23, -4.37114e-08, 1, -6.97574e-16, -1, -4.37114e-08, 2.08165e-12, 30, 2.08165e-12)
