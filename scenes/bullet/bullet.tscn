@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scenes/bullet/bullet.gd" id="1_gd5o3"]
 [ext_resource type="Shader" path="res://shaders/gobot_shader.tres" id="2_bn17w"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_xx4tv"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_smjvd"]
 render_priority = 1
 shader = ExtResource("2_bn17w")
 shader_parameter/albedo = Color(1, 0, 0, 1)
@@ -26,9 +26,11 @@ shader_parameter/uv2_offset = null
 script = ExtResource("1_gd5o3")
 speed = 5.0
 
+[node name="VisibleOnScreenNotifier3D" type="VisibleOnScreenNotifier3D" parent="."]
+
 [node name="Model" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
-material_override = SubResource("ShaderMaterial_xx4tv")
+material_override = SubResource("ShaderMaterial_smjvd")
 mesh = SubResource("SphereMesh_821hp")
 
 [node name="Area3D" type="Area3D" parent="."]
@@ -37,3 +39,5 @@ monitoring = false
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
 shape = SubResource("SphereShape3D_ay0c0")
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier3D" to="." method="_on_visible_on_screen_notifier_3d_screen_exited"]

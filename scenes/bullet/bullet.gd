@@ -48,14 +48,22 @@ func get_attack_type() -> AttackTypes.TYPES:
 #region Implementation
 
 func _change_bullet_color(color: Color):
-	var material = StandardMaterial3D.new()
-	material.albedo_color = color
+	var material = model.get_active_material(0)
+	material.set_shader_parameter("albedo", color)
 	
 	model.material_override = material
 	
 
 func _set_direction(direction: Vector3i):
 	shot_direction = direction
+	
+
+#endregion
+
+#region Listeners
+
+func _on_visible_on_screen_notifier_3d_screen_exited():
+	queue_free()
 	
 
 #endregion
