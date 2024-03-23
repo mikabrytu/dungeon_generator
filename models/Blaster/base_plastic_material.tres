@@ -1,6 +1,6 @@
 [gd_resource type="ShaderMaterial" load_steps=6 format=3 uid="uid://d1s3o36ds7mfm"]
 
-[ext_resource type="Shader" path="res://shaders/gobot_shader.tres" id="1_1nx8g"]
+[ext_resource type="Shader" uid="uid://y8ft7vo6yj7a" path="res://shaders/gobot_shader.tres" id="1_1nx8g"]
 
 [sub_resource type="Gradient" id="Gradient_3nge7"]
 interpolation_mode = 1
