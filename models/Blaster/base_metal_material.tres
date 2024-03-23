@@ -20,7 +20,7 @@ gradient = SubResource("Gradient_uyu6n")
 [resource]
 render_priority = 0
 shader = ExtResource("1_q8neh")
-shader_parameter/albedo = Color(0.364706, 0.345098, 0.32549, 1)
+shader_parameter/albedo = Color(0.592157, 0.568627, 0.545098, 1)
 shader_parameter/point_size = null
 shader_parameter/roughness = null
 shader_parameter/metallic_texture_channel = null

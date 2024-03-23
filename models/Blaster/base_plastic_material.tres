@@ -4,7 +4,7 @@
 
 [sub_resource type="Gradient" id="Gradient_3nge7"]
 interpolation_mode = 1
-offsets = PackedFloat32Array(0, 0.428094)
+offsets = PackedFloat32Array(0, 0.730408)
 colors = PackedColorArray(0.158472, 0.158472, 0.158472, 1, 1, 1, 1, 1)
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_s6emo"]
@@ -20,7 +20,7 @@ gradient = SubResource("Gradient_utee6")
 [resource]
 render_priority = 0
 shader = ExtResource("1_1nx8g")
-shader_parameter/albedo = Color(0.945098, 0.85098, 0.647059, 1)
+shader_parameter/albedo = Color(0.439216, 0.282353, 0.917647, 1)
 shader_parameter/point_size = 0.0
 shader_parameter/roughness = 0.0
 shader_parameter/metallic_texture_channel = null
