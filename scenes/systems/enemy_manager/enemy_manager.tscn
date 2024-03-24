@@ -6,4 +6,4 @@
 [node name="EnemyManager" type="Node3D"]
 script = ExtResource("1_h5ejx")
 enemie_scenes = Array[PackedScene]([ExtResource("2_ltuvf")])
-enemy_count = 20
+enemy_ratio = 15
