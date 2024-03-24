@@ -23,8 +23,10 @@ func _get_actors():
 	
 	for node in nodes:
 		var actor = node as Actor
-		actor.actor_finished.connect(_on_actor_finished)
+		if (!actor.is_acting):
+			continue
 		
+		actor.actor_finished.connect(_on_actor_finished)
 		actors.append(actor)
 	
 	actors.sort_custom(func(a, b): return a.priority < b.priority)
