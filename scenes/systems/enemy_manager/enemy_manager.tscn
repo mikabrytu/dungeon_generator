@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://rehlt2gvbidt"]
+
+[ext_resource type="Script" path="res://scenes/systems/enemy_manager/enemy_manager.gd" id="1_h5ejx"]
+[ext_resource type="PackedScene" uid="uid://b2igpnmoc7kp5" path="res://scenes/actors/enemy/enemy.tscn" id="2_ltuvf"]
+
+[node name="EnemyManager" type="Node3D"]
+script = ExtResource("1_h5ejx")
+enemie_scenes = Array[PackedScene]([ExtResource("2_ltuvf")])
+enemy_count = 20
