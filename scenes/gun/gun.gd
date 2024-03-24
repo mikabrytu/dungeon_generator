@@ -3,6 +3,7 @@ extends Node3D
 const AttackTypes = preload("res://scripts/attack_types.gd")
 
 @export var bullet_scene: PackedScene
+@export var emission_material: ShaderMaterial
 
 @onready var spawn_marker: Marker3D = $Marker3D
 
@@ -61,6 +62,8 @@ func _switch_shot(type: AttackTypes.TYPES):
 	
 	if (type == AttackTypes.TYPES.NONE):
 		color = Color.BLACK
+	
+	emission_material.set_shader_parameter("albedo", color)
 	
 
 #endregion
