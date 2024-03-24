@@ -4,6 +4,7 @@ const AttackTypes = preload("res://scripts/attack_types.gd")
 
 @export var priority: int = 1
 @export var weakness: AttackTypes.TYPES
+@export var is_acting: bool = false
 
 @onready var collision_area: Area3D = $CollisionArea
 @onready var health: Health = $Health

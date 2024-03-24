@@ -40,9 +40,6 @@ albedo_color = Color(0.407843, 0.172549, 0.156863, 1)
 
 [node name="Main" type="Node3D"]
 
-[node name="DebugCamera" parent="." instance=ExtResource("1_wul34")]
-transform = Transform3D(1, -6.97574e-16, -1.52459e-23, -1.5246e-23, -4.37114e-08, 1, -6.97574e-16, -1, -4.37114e-08, 2.08165e-12, 30, 2.08165e-12)
-
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_1ycw3")
 
@@ -58,3 +55,6 @@ environment = SubResource("Environment_1ycw3")
 transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 2.08165e-12, -0.5, 2.08165e-12)
 material_override = SubResource("StandardMaterial3D_y3bjt")
 mesh = SubResource("PlaneMesh_rmgmt")
+
+[node name="DebugCamera" parent="." instance=ExtResource("1_wul34")]
+transform = Transform3D(1, -6.97574e-16, -1.52459e-23, -1.5246e-23, -4.37114e-08, 1, -6.97574e-16, -1, -4.37114e-08, 2.08165e-12, 30, 2.08165e-12)
