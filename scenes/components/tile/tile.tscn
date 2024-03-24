@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://67f5u4piagow"]
 
-[ext_resource type="Script" path="res://scenes/tile/tile.gd" id="1_a2bgj"]
+[ext_resource type="Script" path="res://scenes/components/tile/tile.gd" id="1_a2bgj"]
 [ext_resource type="PackedScene" uid="uid://gvugqdum30pi" path="res://models/Rocks/rocks.tscn" id="2_pueai"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_lf22c"]

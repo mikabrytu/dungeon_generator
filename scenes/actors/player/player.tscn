@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://b4ux6k01eab6r"]
 
-[ext_resource type="Script" path="res://scenes/player/player.gd" id="1_i2002"]
-[ext_resource type="PackedScene" uid="uid://17sxhdwjq2qr" path="res://scenes/health/health.tscn" id="2_177ib"]
-[ext_resource type="PackedScene" uid="uid://b06gfqr7ko2am" path="res://scenes/gun/gun.tscn" id="3_7fnoa"]
+[ext_resource type="Script" path="res://scenes/actors/player/player.gd" id="1_i2002"]
+[ext_resource type="PackedScene" uid="uid://17sxhdwjq2qr" path="res://scenes/systems/health/health.tscn" id="2_177ib"]
+[ext_resource type="PackedScene" uid="uid://b06gfqr7ko2am" path="res://scenes/components/gun/gun.tscn" id="3_7fnoa"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4nqkj"]
 albedo_color = Color(0, 0.513726, 0.282353, 1)
@@ -23,7 +23,6 @@ transform = Transform3D(1, -6.50845e-16, 1.74393e-16, 1.74393e-16, 0.5, 0.866025
 light_energy = 0.5
 
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
-visible = false
 material_override = SubResource("StandardMaterial3D_4nqkj")
 use_collision = true
 size = Vector3(0.8, 0.8, 0.8)

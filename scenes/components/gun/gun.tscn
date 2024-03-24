@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://b06gfqr7ko2am"]
 
-[ext_resource type="Script" path="res://scenes/gun/gun.gd" id="1_eu12u"]
-[ext_resource type="PackedScene" uid="uid://cp1ha4v358x5i" path="res://scenes/bullet/bullet.tscn" id="2_psfgq"]
+[ext_resource type="Script" path="res://scenes/components/gun/gun.gd" id="1_eu12u"]
+[ext_resource type="PackedScene" uid="uid://cp1ha4v358x5i" path="res://scenes/components/bullet/bullet.tscn" id="2_psfgq"]
 [ext_resource type="Material" uid="uid://canhbw7tehvaw" path="res://models/Blaster/blaster_emission.tres" id="3_cqr8t"]
 [ext_resource type="PackedScene" uid="uid://b251om0ceebf4" path="res://models/Blaster/blaster.tscn" id="3_x2h23"]
 

@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://b2igpnmoc7kp5"]
 
-[ext_resource type="Script" path="res://scenes/enemy/enemy.gd" id="1_8uuuy"]
-[ext_resource type="PackedScene" uid="uid://17sxhdwjq2qr" path="res://scenes/health/health.tscn" id="2_64maj"]
+[ext_resource type="Script" path="res://scenes/actors/enemy/enemy.gd" id="1_8uuuy"]
+[ext_resource type="PackedScene" uid="uid://17sxhdwjq2qr" path="res://scenes/systems/health/health.tscn" id="2_64maj"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_ta2y5"]
 

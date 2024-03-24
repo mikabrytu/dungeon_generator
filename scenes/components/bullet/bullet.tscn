@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://cp1ha4v358x5i"]
 
-[ext_resource type="Script" path="res://scenes/bullet/bullet.gd" id="1_gd5o3"]
-[ext_resource type="Shader" path="res://shaders/gobot_shader.tres" id="2_bn17w"]
+[ext_resource type="Script" path="res://scenes/components/bullet/bullet.gd" id="1_gd5o3"]
+[ext_resource type="Shader" uid="uid://y8ft7vo6yj7a" path="res://shaders/gobot_shader.tres" id="2_bn17w"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_smjvd"]
 render_priority = 1

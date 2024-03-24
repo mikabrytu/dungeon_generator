@@ -12,6 +12,8 @@ func _move():
 #region Actor Override
 
 func can_act():
-	_move()
+	#_move()
+	actor_finished.emit()
+	
 
 #endregion
